@@ -22,7 +22,7 @@ MOTHERDUCK_SERVICE_TOKEN="ey********"
 2. Set the Main file path to `app.py`
 3. Deploy.
 4. You should get an error that MOTHERDUCK_SERVICE_TOKEN is undefined.
-5. Go to your Streamlit app settings and paste the contents of your local `secrets.toml` file. 
+5. Go to your Streamlit app settings secrets and paste the contents of your local `secrets.toml` file. 
 
 ```
 MOTHERDUCK_SERVICE_TOKEN="ey********"
