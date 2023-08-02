@@ -2,21 +2,28 @@
 
 Connect to MotherDuck from your Streamlit app. Powered by `st.experimental_connection()`
 
-## Running the example
+## Develop locally
 
-Run the example with:
+First, install the requirements `pip install`. 
 
-```bash
-streamlit run examples/app.py
+1. Add a folder `.streamlit` in the root directory.
+2. Add a file `secrets.toml`.
+3. Paste your service token from Motherduck.
+
+```
+MOTHERDUCK_SERVICE_TOKEN="ey********"
 ```
 
-This will start a Streamlit app that connects to MotherDuck. 
+4. streamlit run apps.py
 
-MotherDuck will prompt you to authorize the connection. Once you do, you'll see the app print out the data it receives from MotherDuck. 
+## Deploy to Streamlit Community Cloud
 
-You can export the connection token so that you don't have to authorize the connection every time you run the app:
-```bash
-export motherduck_token=<your token>
+1. Create a new app at [https://share.streamlit.io/](https://share.streamlit.io/).
+2. Set the Main file path to `app.py`
+3. Deploy.
+4. You should get an error that MOTHERDUCK_SERVICE_TOKEN is undefined.
+5. Go to your Streamlit app settings and paste the contents of your local `secrets.toml` file. 
+
 ```
-
-![image](https://github.com/patricktrainer/motherduck-connection/assets/36834097/4ab6b086-6436-4f92-8145-e80912fbd92f)
+MOTHERDUCK_SERVICE_TOKEN="ey********"
+```

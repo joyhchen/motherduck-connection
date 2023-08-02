@@ -22,13 +22,7 @@ class MotherDuckConnection(
             A DuckDBPyConnection object representing the connection to the database.
         """
 
-        return duckdb.connect('md:?motherduck_token='+st.secrets['MOTHERDUCK_CONNECTION'])
-
-        # url_scheme: str = "motherduck:"
-        # if database is None:
-        #     database = "my_db"
-        
-        # return duckdb.connect(f"{url_scheme}{database}", **kwargs)
+        return duckdb.connect('md:?motherduck_token='+st.secrets['MOTHERDUCK_SERVICE_TOKEN'])
 
     def query(self, query: str) -> DataFrame:
         """
