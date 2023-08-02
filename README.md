@@ -14,7 +14,7 @@ First, install the requirements `pip install`.
 MOTHERDUCK_SERVICE_TOKEN="ey********"
 ```
 
-4. streamlit run apps.py
+4. streamlit run app.py
 
 ## Deploy to Streamlit Community Cloud
 
